@@ -12,7 +12,7 @@ const { argv } = require('process');
     await page.goto('https://www.smbc-card.com/olentry/online_nyukai/login_display.do', {waitUntil: "domcontentloaded"});
 
     // 多少待たないとレンダリングが間に合わないっぽい
-    await page.waitFor(5000);
+    await page.waitFor(15000);
 
     // await page.screenshot({path: 'home1.png', fullPage: true});
     
@@ -32,7 +32,7 @@ const { argv } = require('process');
     // await page.screenshot({path: 'logout.png', fullPage: true});
 
     // 多少待たないとレンダリングが間に合わないっぽい
-    await page.waitFor(5000);
+    await page.waitFor(15000);
 
     var data = await page.$eval('.thanks', item => {
       return item.textContent;
