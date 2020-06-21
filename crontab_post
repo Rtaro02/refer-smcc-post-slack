@@ -1,1 +1,1 @@
-*/1 * * * * docker run --rm post:latest 
+0 0-15 * * * root docker run --rm post:latest 
